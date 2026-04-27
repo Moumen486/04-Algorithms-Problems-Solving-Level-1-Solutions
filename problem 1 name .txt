@@ -1,0 +1,15 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+void namerol(string name)
+{
+	cout << "the name is : " << name << endl;
+}
+int main()
+{
+
+	namerol("mohamed");
+	return 0;
+}
+

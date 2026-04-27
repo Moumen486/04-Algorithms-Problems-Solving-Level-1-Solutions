@@ -1,0 +1,30 @@
+#include<iostream>
+#include<string>
+using namespace std;
+float readpositivenumber(string message)
+{
+	float  number=0;
+	do
+	{
+		cout << message << endl;
+		cin >> number;
+	} while (number <= 0);
+	return number;
+}
+float totalbillafterservicetax(float totalbill)
+{
+	totalbill = totalbill * 1.1;
+	totalbill = totalbill * 1.16;
+	return totalbill;
+}
+
+int main()
+{
+	float totalbill = readpositivenumber("please entre the total bill");
+	cout << endl;
+	cout << "totalbill is : " << totalbill << endl;
+	cout << "totalbill after service tax is : " << totalbillafterservicetax(totalbill) << endl;
+
+	
+	return 0; 
+}

@@ -1,0 +1,31 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void readnumber(int& num1, int& num2, int& num3)
+{
+	cout << "please entre the first number:  " << endl;
+	cin >> num1;
+	cout << "please entre the second number: " << endl;
+	cin >> num2;
+	cout << "please entre the third number: " << endl;
+	cin >> num3;
+}
+float  thesum(int num1, int num2, int num3)
+{
+	return num1 + num2 + num3;
+}
+void printnumber(int total)
+{
+	cout << "the avrage of numbers is: " << total << endl;
+}
+float calculattheavrg(int num1, int num2, int num3)
+{
+	return (float)thesum(num1, num2, num3) / 3;
+}
+int main()
+{
+	int num1, num2, num3;
+	readnumber(num1, num2, num3);
+	printnumber(calculattheavrg(num1, num2, num3));
+	return 0;
+}

@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string>
+using namespace std;
+enum enmarked{passed=1,failed=2};
+int readmark()
+{
+	int mark;
+	cout << "please entre the number: " << endl;
+	cin >> mark;
+	return mark;
+}
+enmarked checkmark(int mark)
+{
+	if (mark >= 50)
+		return enmarked::passed;
+	else
+		return enmarked::failed;
+}
+void printmark(int mark)
+{
+	if(checkmark(mark)==enmarked::passed)
+		cout << "he is hired" << endl;
+	else
+		cout << "he is fired" << endl;
+}
+int main()
+{
+	printmark(readmark());
+}

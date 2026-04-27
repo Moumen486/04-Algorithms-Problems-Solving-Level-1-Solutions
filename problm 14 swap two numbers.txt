@@ -1,0 +1,32 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void readmark(int& num1, int& num2)
+{
+	cout << "please entre your first mark" << endl;
+	cin >> num1;
+	cout << "please entre your second mark" << endl;
+	cin >> num2;
+}
+void swap(int& a, int& b)
+{
+	int temp;
+	temp = a;
+	a = b;
+	b = temp;
+}
+
+void printmark(int num1,int num2)
+{
+	cout << "the number one is: " << num1 << endl;
+	cout << "th number two is : " << num2 << endl;
+}
+int main()
+{
+	int num1,num2;
+	readmark(num1,num2);
+	printmark(num1, num2);
+	swap(num1, num2);
+	printmark(num1, num2);
+		return 0;
+}

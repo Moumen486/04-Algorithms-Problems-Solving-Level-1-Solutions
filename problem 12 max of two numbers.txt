@@ -1,0 +1,28 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void readmark(int& num1, int& num2)
+{
+	cout << "please entre your first mark" << endl;
+	cin >> num1;
+	cout << "please entre your second mark" << endl;
+	cin >> num2;
+}
+int themax(int num1, int num2)
+{
+	if (num1 > num2)
+		return num1;
+	else
+		return num2;
+}
+void printmark(int max)
+{
+	cout << "th max is: " << max << endl;
+}
+int main()
+{
+	int num1,num2;
+	readmark(num1,num2);
+		printmark(themax(num1,num2));
+		return 0;
+}

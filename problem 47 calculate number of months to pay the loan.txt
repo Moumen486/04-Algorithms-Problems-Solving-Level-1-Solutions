@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int readpositivenumber(string message)
+{
+	int number;
+	do
+	{
+		cout << message << endl;
+		cin >> number;
+	} while (number <= 0);
+	return number;
+}
+float calculatenumberofmonths(float loanmonth, float monthlyinstallement)
+{
+	return loanmonth / monthlyinstallement;
+}
+
+int main()
+{
+	float loanmonth = readpositivenumber("please enter the leonafmonth: ");
+	float monthlyinstallement = readpositivenumber("please enter the monthlyinsatlement: ");
+
+	cout << "the number of months is : " << calculatenumberofmonths(loanmonth,monthlyinstallement) << endl;
+	return 0;
+}

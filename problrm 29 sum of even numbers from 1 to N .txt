@@ -1,0 +1,69 @@
+#include<iostream>
+#include<string>
+using namespace std;
+enum enoddeven{odd=1,even=2};
+int readnumber()
+{
+	int N;
+	cout << "please entre the number: " << endl;
+	cin >> N;
+	return N;
+}
+enoddeven checkoddOReven(int N)
+{
+	if (N % 2 == 0)
+		return enoddeven::even;
+	else
+		return enoddeven::odd;
+}
+int sumfrom1toN_usingfor(int N)
+{
+	int sum = 0;
+	cout << "the sum of even numbrs is: " << endl;
+	for (int i = 1; i <= N; i++)
+	{
+		if (checkoddOReven(i) == enoddeven::even)
+			sum += i;
+	}
+	return sum;
+
+}
+int sumfrom1toN_usingwhile(int N)
+{
+	int counter = 0;
+	int sum = 0;
+	cout << "the sum of even numbrs using while is: " << endl;
+	while (counter < N)
+	{
+		counter++;
+		if (checkoddOReven(counter) == enoddeven::even)
+		{
+			sum += counter;
+		}
+	}
+	return sum;
+}
+int sumfrom1toN_usingdowhile(int N)
+{
+	int sum = 0;
+	int counter = 0;
+	cout << "the sum of even numbrs using do while is: " << endl;
+	do
+	{
+		counter++;
+		if (checkoddOReven(counter) == enoddeven::even)
+		{
+			sum += counter;
+		}
+	} while (counter < N);
+
+	return sum;
+}
+int main()
+{
+	int N = readnumber();
+	cout << sumfrom1toN_usingfor(N) << endl;
+	cout << sumfrom1toN_usingwhile(N) << endl;
+	cout<<sumfrom1toN_usingdowhile(N) << endl;
+	return 0;
+}

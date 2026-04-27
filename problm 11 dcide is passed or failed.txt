@@ -1,0 +1,42 @@
+#include<iostream>
+#include<string>
+using namespace std;
+enum encheck{pass=1,failed=2};
+int readmark(int& mark1, int& mark2, int& mark3)
+{
+	cout << "please entre your first mark" << endl;
+	cin >> mark1;
+	cout << "please entre your second mark" << endl;
+	cin >> mark2;
+	cout << "please entre your third mark" << endl;
+	cin >> mark3;
+}
+int thesum(int mark1, int mark2, int mark3)
+{
+	return mark1 + mark2 + mark3;
+}
+float theavrage(int mark1, int mark2, int mark3)
+{
+	return (float)thesum(mark1, mark2, mark3) / 3;
+}
+encheck checkthestatus(int avrage)
+{
+	if (avrage >= 10)
+		return encheck::pass;
+	else
+		return encheck::failed;
+}
+void printmark(int avrage)
+{
+	if (checkthestatus(avrage) == encheck::pass)
+		cout << "he is paseed" << endl;
+	else
+		cout << "he is failed" << endl;
+}
+int main()
+{
+	int mark1, mark2, mark3;
+	readmark(mark1, mark2, mark3);
+		printmark(thesum(mark1, mark2, mark3));
+		return 0;
+}

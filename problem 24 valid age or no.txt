@@ -1,0 +1,27 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+int readarea()
+{
+	int age;
+	cout << "please entre your age: " << endl;
+	cin>> age;
+	return age;
+
+}
+bool validage(int number,int from,int to)
+{
+	return (number >= from && number <= 45);
+}
+void printarea(int age)
+{
+	if (validage(age, 18, 45))
+		cout << age << "is valid age" << endl;
+	else
+		cout << age << "is invalid age" << endl;
+}
+int main()
+{
+	printarea(readarea());
+}

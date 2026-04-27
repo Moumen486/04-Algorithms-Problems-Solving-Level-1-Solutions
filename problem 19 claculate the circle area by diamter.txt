@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+const float PI = 3.14;
+void readarea(float& D)
+{
+	cout << "please entre the diamter D: " << endl;
+	cin>> D;
+}
+float calculatearea(float D)
+{
+	float area = (PI * pow(D, 2)) / 4;
+	return area;
+}
+void printarea(float area)
+{
+	cout << "the area is: " <<area<< endl;
+}
+int main()
+{
+	float D;
+	readarea(D);
+	printarea(calculatearea(D));
+	return 0;
+}

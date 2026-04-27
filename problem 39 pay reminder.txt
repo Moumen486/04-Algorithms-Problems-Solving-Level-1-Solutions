@@ -1,0 +1,32 @@
+#include<iostream>
+#include<string>
+using namespace std;
+float readpositivenumber(string message)
+{
+	float  number=0;
+	do
+	{
+		cout << message << endl;
+		cin >> number;
+	} while (number <= 0);
+	return number;
+}
+float calculaterreminder(float totalbill, float cachbill)
+{
+	return cachbill - totalbill;
+}
+
+int main()
+{
+	float totalbill = readpositivenumber("please entre the total bill");
+	float cachbill = readpositivenumber("please entre the cachbill: ");
+
+	cout << endl;
+	cout <<  "totalbill is:" <<totalbill<< endl;
+	cout << "cachbill is: " << cachbill << endl;
+	cout << "**************************************" << endl;
+	cout << "reminder= " << calculaterreminder(totalbill,cachbill);
+
+	
+	return 0; 
+}

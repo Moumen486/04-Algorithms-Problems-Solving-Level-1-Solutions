@@ -1,0 +1,35 @@
+#include<iostream>
+#include<string>
+using namespace std;
+struct strinfo
+{
+	string firstname;
+	string lastname;
+};
+strinfo readperson()
+{
+	strinfo info;
+	cout << "please entre your firstname: " << endl;
+	cin >> info.firstname;
+	cout << "please entre your lastname: " << endl;
+	cin >> info.lastname;
+		return info;
+}
+string getfullname(strinfo info, bool reversed)
+{
+	string fullname;
+	if(reversed)
+	fullname = info.lastname + " " + info.firstname;
+	else
+		fullname = info.firstname + " " + info.lastname;
+	return fullname;
+}
+void printperson(string fullname)
+{
+	cout << "your fullname is: " << fullname << endl;
+}
+int main()
+{
+	printperson(getfullname(readperson(),true));
+	return 0;
+}

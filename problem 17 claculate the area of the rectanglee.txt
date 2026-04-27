@@ -1,0 +1,27 @@
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+void readarea(float& a, float& h)
+{
+	cout << "please entre the width a: " << endl;
+	cin>> a;
+	cout << "please entre the high h: " << endl;
+	cin>>  h;
+}
+float calculatearea(float a, float h)
+{
+	float area = 0.5 * a * h;
+	return area;
+}
+void printarea(float area)
+{
+	cout << "the area is: " <<area<< endl;
+}
+int main()
+{
+	float a, h;
+	readarea(a, h);
+	printarea(calculatearea(a, h));
+	return 0;
+}

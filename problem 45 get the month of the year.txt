@@ -1,0 +1,45 @@
+#include<iostream>
+#include<string>
+using namespace std;
+enum enmonthofyear { jan = 1,feb=2,mar=3,apr=4,may=5,jun=6,jul=7,aug=8,sep=9,oct=10,nov=11,dec=12 };
+int testmonth(string message,int from,int to)
+{
+	int number=0;
+	do
+	{
+		cout << message;
+		cin >> number;
+	} while (number<from || to<number);
+	return number;
+}
+enmonthofyear readmonth()
+{
+	return (enmonthofyear)   testmonth("please enter the month of the year:jan = 1,feb=2,mar=3,apr=4,may=5,jun=6,jul=7,aug=8,sep=9,oct=10,nov=11,dec=12 ",1,12);
+}
+string printthemonth(enmonthofyear month)
+{
+	switch (month)
+	{
+	case enmonthofyear::jan:
+			return "january";
+	case enmonthofyear::feb:
+		return "febraury";
+	case enmonthofyear::mar:
+		return "march";
+	case enmonthofyear::apr:
+		return "april";
+	case enmonthofyear::may:
+		return "may";
+	case enmonthofyear::jun:
+		return "juin";
+	case enmonthofyear::jul:
+		return "juillet";
+	default:
+		return "not a valid month";
+	}
+}
+int main()
+{
+	cout << printthemonth(readmonth()) << endl;
+	return 0;
+}

@@ -1,0 +1,37 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int readtotalsales()
+{
+	int totalsales;
+	cout << "please entre thr totalsales: " << endl;
+	cin >> totalsales;
+	return totalsales;
+}
+float getcomissionpercentage(int totalsales)
+{
+	if (totalsales >= 1000000)
+		return 0.01;
+	else if (totalsales >= 500000)
+		return 0.02;
+	else if (totalsales >= 100000)
+		return 0.03;
+	else if (totalsales >= 50000)
+		return 0.05;
+	else
+		return 0.00;
+}
+float claculatetotalcomission(int totalsales)
+{
+	return getcomissionpercentage(totalsales) * totalsales;
+	
+}
+int main()
+{
+	int totalsales = readtotalsales();
+	cout << "percentage: " << getcomissionpercentage(totalsales) << endl;
+	cout << "totalcomission: " << claculatetotalcomission(totalsales);
+
+
+	return 0;
+}

@@ -1,0 +1,47 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int readnumber()
+{
+	int N;
+	cout << "please entre the number: " << endl;
+	cin >> N;
+	return N;
+}
+void printnumbrfrom1toN_usingwhile(int N)
+{
+	int counter = 0;
+	cout << "the numbers using while is" << endl;
+	while (counter < N)
+	{
+		counter++;
+		cout << counter << endl;
+	}
+}
+void printnumbrfrom1toN_usingdowhil(int N)
+{
+	int counter = 0;
+	cout << "the numbers using do while statement is: " << endl;
+	do
+	{
+		counter++;
+		cout << counter << endl;
+	} while (counter < N);
+}
+void printnumbrfrom1toN_usingfor(int N)
+{
+	cout << "print numbr using for statement: " << endl;
+	for (int i=1;i<=N;i++)
+	{
+		cout << i << endl;
+	}
+}
+int main()
+{
+	int N = readnumber();
+	printnumbrfrom1toN_usingwhile(N);
+	printnumbrfrom1toN_usingdowhil(N);
+	printnumbrfrom1toN_usingfor(N);
+
+	return 0;
+}

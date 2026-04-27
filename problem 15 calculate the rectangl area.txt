@@ -1,0 +1,25 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void readarea(float& a, float& b)
+{
+	cout << "please entre the width a: " << endl;
+	cin>> a;
+	cout << "please entre the lenght b: " << endl;
+	cin>>  b;
+}
+float calculatearea(float a, float b)
+{
+	return a * b;
+}
+void printarea(float area)
+{
+	cout << "the area is: " <<area<< endl;
+}
+int main()
+{
+	float a, b;
+	readarea(a, b);
+	printarea(calculatearea(a, b));
+	return 0;
+}

@@ -1,0 +1,45 @@
+#include<iostream>
+#include<string>
+using namespace std;
+enum endayofweek { sat = 1,san=2,mon=3,tue=4,wed=5,thu=6,fri=7 };
+int testday(string message,int from,int to)
+{
+	int number=0;
+	do
+	{
+		cout << message;
+		cin >> number;
+	} while (number<from || to<number);
+	return number;
+}
+endayofweek readday()
+{
+	return (endayofweek)   testday("please enter the day of the week:sat = 1,san=2,mon=3,tue=4,wed=5,thu=6,fri=7 ",1,7);
+}
+string printtheday(endayofweek day)
+{
+	switch (day)
+	{
+	case endayofweek::sat:
+			return "saturday";
+	case endayofweek::san:
+		return "sunday";
+	case endayofweek::mon:
+		return "monday";
+	case endayofweek::tue:
+		return "tuesday";
+	case endayofweek::wed:
+		return "wedensday";
+	case endayofweek::thu:
+		return "thursady";
+	case endayofweek::fri:
+		return "friday";
+	default:
+		return "not a valid day";
+	}
+}
+int main()
+{
+	cout << printtheday(readday()) << endl;
+	return 0;
+}

@@ -1,0 +1,28 @@
+#include<iostream>
+#include<string>
+using namespace std;
+struct penniesstruct
+{
+	int penny, nickel, dime, quarter, dollar;
+};
+penniesstruct readcurrency()
+{
+	penniesstruct penniescurrency;
+	cout << "please entre pennies: " << endl;
+	cin >> penniescurrency.penny;
+	cout << "please entre nickels: " << endl;
+	cin >> penniescurrency.nickel;
+}
+float totalcurrency(penniesstruct penniescurrency )
+{
+	int totalpennies = 0;
+	totalpennies = penniescurrency.penny * 1 + penniescurrency.nickel * 5;
+	return totalpennies;
+}
+int main()
+{
+	int totalpennies = totalcurrency(readcurrency());
+
+
+	return 0;
+}

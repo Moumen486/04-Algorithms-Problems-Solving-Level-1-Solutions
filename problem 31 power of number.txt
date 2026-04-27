@@ -1,0 +1,25 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int readnumber()
+{
+	int N;
+	cout << "please entre a number: " << endl;
+	cin >> N;
+	return N;
+}
+void powerof2_3_4_numbers(int N)
+{
+	int a, b, c;
+	a = N * N;
+	b = N * N * N;
+	c = N * N * N * N;
+	cout << a << " " << b << " " << c << endl;
+}
+int main()
+{
+
+	powerof2_3_4_numbers(readnumber());
+	return 0;
+}
+

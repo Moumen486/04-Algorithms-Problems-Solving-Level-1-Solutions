@@ -1,0 +1,36 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int readnumber()
+{
+	int N;
+	cout << "please entre the number: " << endl;
+	cin >> N;
+	return N;
+
+}
+int readpower()
+{
+	int M;
+	cout << "please entre the power: " << endl;
+	cin >> M;
+	return M;
+}
+int powerofnumber(int N, int M)
+{
+	if (M == 0)
+	{
+		return 1;
+	}
+	int P = 1;
+	for (int i = 0; i <= M; i++)
+	{
+		P = P * N;
+	}
+	return P;
+}
+int main()
+{
+	cout<<"result: "<<powerofnumber(readpower(), readnumber());
+	return 0;
+}
